@@ -1,4 +1,5 @@
 from django.db import models
+from cloudinary import models as cloud_models
 
 
 # Create your models here.
@@ -7,4 +8,4 @@ class Greeting(models.Model):
 
 
 class Product(models.Model):
-    image = models.ImageField()
+    image = cloud_models.CloudinaryField('image')
